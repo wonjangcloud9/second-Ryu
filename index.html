@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title> 유승훈 Fanpage </title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<link rel="stylesheet"  href="css/lightslider.css"/>
+<style>
+  ul{
+  list-style: none outside none;
+    padding-left: 0;
+        margin: 0;
+}
+    .demo .item{
+        margin-bottom: -20px;
+    }
+.content-slider li{
+    background-color: #ed3020;
+    text-align: center;
+    color: #FFF;
+}
+.content-slider h3 {
+    margin: 0;
+    padding: 70px 0;
+}
+.demo{
+  width: 800px;
+}
+#image-gallery li img[src]{
+    margin:0;
+    width:100%;
+    height:100%;
+}
+#image-gallery li[data-thumb]{
+  margin-right:0px;
+  height:400px;
+  width:100%;
+}
+#clearfix {
+   width:960px;
+
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/lightslider.js"></script>
+<script>
+   $(document).ready(function() {
+  $("#content-slider").lightSlider({
+            loop:true,
+            keyPress:true
+        });
+        $('#image-gallery').lightSlider({
+            gallery:true,
+            item:1,
+            vertical:true,
+            thumbItem:9,
+            thumbMargin:-1,
+            slideMargin: 0,
+            keyPress: false,
+            speed:800,
+            auto:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#image-gallery').removeClass('cS-hidden');
+            }
+        });
+});
+</script>
+<link href="http://fonts.googleapis.com/css?family=Henny+Penny" rel="stylesheet" type="text/css" />
+<!-- 초기화 -->
+<style>
+    * { margin: 0; padding: 0; }
+    body { font-family: 'Times New Roman', serif; }
+    li { list-style: none; }
+    a { text-decoration: none; }
+    img { border: 0; }
+</style>
+<!-- 헤더 -->
+<style>
+    #main_header {
+        /* 중앙 정렬*/
+        width: 960px; margin: 0 auto;
+
+        /* 절대 좌표 */
+        height: 160px;
+        position: relative;
+    }
+    #main_header > #title {
+        position: absolute;
+        left: 20px; top: 30px;
+    }
+    #main_header > #main_gnb {
+        position: absolute;
+        right: 0; top: 0;
+    }
+    #main_header > #main_lnb {
+        position: absolute;
+        right: 0; bottom: 10px;
+    }
+</style>
+<!-- 타이틀 -->
+<style>
+    #title {
+        font-family: 'Henny Penny', cursive;
+    }
+</style>
+<!-- 메뉴(1) -->
+<style>
+    #main_gnb > ul { overflow: hidden; }
+    #main_gnb > ul > li { float: left; }
+    #main_gnb > ul > li > a {
+        display: block;
+        padding: 2px 10px;
+        border: 1px solid black;
+    }
+    #main_gnb > ul > li > a:hover {
+        background: black;
+        color: white;
+    }
+    #main_gnb > ul > li:first-child > a { border-radius: 10px 0 0 10px; }
+    #main_gnb > ul > li:last-child > a  { border-radius: 0 10px 10px 0; }
+</style>
+<!-- 메뉴(2) -->
+<style>
+    #main_lnb > ul { overflow: hidden; }
+    #main_lnb > ul > li { float: left; }
+    #main_lnb > ul > li > a {
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid black;
+    }
+    #main_lnb > ul > li > a:hover {
+        background: black;
+        color: white;
+    }
+    #main_lnb > ul > li:first-child > a { border-radius: 10px 0 0 10px; }
+    #main_lnb > ul > li:last-child > a  { border-radius: 0 10px 10px 0; }
+</style>
+<!-- 콘텐츠 -->
+<style>
+    #content {
+        /* 중앙 정렬 */
+        width: 960px; margin: 0 auto;
+
+        /* 수평 레이아웃 구성 */
+        overflow: hidden;
+    }
+    #content > #main_section {
+        width: 960px;
+        float: left;
+    }
+    #content > #main_aside {
+        width: 200px;
+        float: right;
+    }
+</style>
+<!-- 본문 -->
+<style>
+    #main_section > article.main_article {
+        margin-bottom: 10px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+</style>
+<!-- 사이드 -->
+<style>
+    /* 첫 번째 탭 */
+    input:nth-of-type(1) { display: none; }
+    input:nth-of-type(1) ~ div:nth-of-type(1) { display: none; }
+    input:nth-of-type(1):checked ~ div:nth-of-type(1) { display: block; }
+
+    /* 두 번째 탭 */
+    input:nth-of-type(2) { display: none; }
+    input:nth-of-type(2) ~ div:nth-of-type(2) { display: none; }
+    input:nth-of-type(2):checked ~ div:nth-of-type(2) { display: block; }
+
+    /* 탭 모양 구성 */
+    section.buttons { overflow: hidden; }
+    section.buttons > label {
+        /* 수평 정렬 */
+        display: block; float: left;
+
+        /* 크기 및 글자 위치 지정*/
+        width: 100px; height: 30px;
+        line-height: 30px;
+        text-align: center;
+
+        /* 테두리 지정 */
+        box-sizing: border-box;
+        border: 1px solid black;
+
+        /* 색상 지정*/
+        background: black;
+        color: white;
+    }
+    input:nth-of-type(1):checked ~ section.buttons >  label:nth-of-type(1) {
+        background: white;
+        color: black;
+    }
+    input:nth-of-type(2):checked ~ section.buttons >  label:nth-of-type(2) {
+        background: white;
+        color: black;
+    }
+</style>
+<!-- 목록 -->
+<style>
+    .item {
+        overflow: hidden;
+        padding: 0px;
+        border: 1px solid black;
+        border-top: none;
+        width:960px;
+        height:500px;
+        margin:-20px;
+    }
+    .thumbnail {
+        float: left;
+    }
+    .description {
+        float: left;
+        margin-left: 10px;
+    }
+    .description > strong {
+        display: block;
+        width: 120px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+<!-- 푸터 -->
+<style>
+    #main_footer {
+        /* 중앙 정렬 */
+        width: 960px; margin: 0 auto;
+        margin-bottom: 10px;
+
+        /* 테두리 */
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid black;
+
+        /* 글자 정렬 */
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+  <header id="main_header">
+      <div id="title">
+          <h1>KOREA LEGEND OTAKU</h1>
+          <h2>yu seung hoon</h2>
+      </div>
+      <nav id="main_gnb">
+          <ul>
+              <li><a href="#">이</a></li>
+              <li><a href="#">준</a></li>
+              <li><a href="#">장</a></li>
+              <li><a href="#">애</a></li>
+              <li><a href="#">인</a></li>
+          </ul>
+      </nav>
+      <nav id="main_lnb">
+          <ul>
+              <li><a href="#">friend</a></li>
+              <li><a href="#">life</a></li>
+              <li><a href="#">achievements</a></li>
+              <li><a href="#">Quiz</a></li>
+              <li><a href="#">information</a></li>
+          </ul>
+      </nav>
+  </header>
+  <div id="content">
+      <section id="main_section">
+          <article class="main_article">
+            <div class="demo">
+                    <div class="item">
+                        <div class="clearfix">
+                            <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                <li data-thumb="img/thumb/cS-1.jpg">
+                                    <img src="img/cS-1.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-2.jpg">
+                                    <img src="img/cS-2.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-3.jpg">
+                                    <img src="img/cS-3.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-4.jpg">
+                                    <img src="img/cS-4.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-5.jpg">
+                                    <img src="img/cS-5.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-6.jpg">
+                                    <img src="img/cS-6.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-7.jpg">
+                                    <img src="img/cS-7.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-8.jpg">
+                                    <img src="img/cS-8.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-9.jpg">
+                                    <img src="img/cS-9.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-10.jpg">
+                                    <img src="img/cS-10.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-11.jpg">
+                                    <img src="img/cS-11.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-12.jpg">
+                                    <img src="img/cS-12.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-13.jpg">
+                                    <img src="img/cS-13.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-14.jpg">
+                                    <img src="img/cS-14.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-15.jpg">
+                                    <img src="img/cS-15.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-16.jpg">
+                                    <img src="img/cS-16.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-17.jpg">
+                                    <img src="img/cS-17.jpg" />
+                                     </li>
+                                <li data-thumb="img/thumb/cS-18.jpg">
+                                    <img src="img/cS-18.jpg" />
+                                     </li>
+                                     <li data-thumb="img/thumb/cS-19.jpg">
+                                         <img src="img/cS-19.jpg" />
+                                       </li><li data-thumb="img/thumb/cS-20.jpg">
+                                              <img src="img/cS-20.jpg" />
+                                            </li><li data-thumb="img/thumb/cS-21.jpg">
+                                                   <img src="img/cS-21.jpg" />
+                                                 </li><li data-thumb="img/thumb/cS-22.jpg">
+                                                        <img src="img/cS-22.jpg" />
+                                                      </li><li data-thumb="img/thumb/cS-23.jpg">
+                                                             <img src="img/cS-23.jpg" />
+                                                           </li><li data-thumb="img/thumb/cS-24.jpg">
+                                                                  <img src="img/cS-24.jpg" />
+                                                                   </li>
+                                                                   <li data-thumb="img/thumb/cS-25.jpg">
+                                                                       <img src="img/cS-25.jpg" />
+                                                                     </li><li data-thumb="img/thumb/cS-26.jpg">
+                                                                            <img src="img/cS-26.jpg" />
+                                                                          </li><li data-thumb="img/thumb/cS-27.jpg">
+                                                                                 <img src="img/cS-27.jpg" />
+                                                                               </li><li data-thumb="img/thumb/cS-28.jpg">
+                                                                                      <img src="img/cS-28.jpg" />
+                                                                                       </li>
+
+
+                            </ul>
+                        </div>
+                  </div>
+          </article>
+          <article class="main_article">
+              <h1>유승훈 그는 누구인가?</h1>
+            <p>유승훈은 1995년 7월 18일에 태어났으며 키는 168cm 몸무게 76kg ( 최고기록 87kg )입니다.</p>
+            <p>오류초등학교를 거쳐 개봉중학교 , 양천고등학교를 졸업하여 현재 수원과학대학교에 다니고 있습니다.</p>
+            <p>그는 지금까지 단 한 번도 여자친구를 사귄 적이 없습니다. 이유는!!???</p>
+            <p>유승훈의 팬이라면 아실 것이라 믿습니다.</p>
+          </article>
+          <article class="main_article">
+              <h1>유승훈!</h1>
+              <p>유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!
+              유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!</p>
+          </article>
+      </section>
+  </div>
+  <footer id="main_footer">
+      <h3>유승훈 팬페이지입니다</h3>
+      <address>유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!유승훈!</address>
+  </footer>
+</body>
+</html>
